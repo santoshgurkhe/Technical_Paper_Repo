@@ -1,5 +1,7 @@
 # Platform as a Service (PaaS)
 
+![Alternative Text](paas.webp)
+
 ## Introduction
 
 Platform as a Service, also called PaaS, is one of the cloud computing services that helps developers build and run applications without worrying about the hardware or system setup. Instead of buying powerful computers or maintaining servers, developers can use an online platform that already has everything they need. This makes software development faster and easier because they can spend more time writing code and less time managing the system.
@@ -7,6 +9,12 @@ Platform as a Service, also called PaaS, is one of the cloud computing services 
 ## How PaaS Works
 
 When using PaaS, the cloud provider prepares the development environment. The provider takes care of the servers, operating system, storage, networking, security updates, and software installation. The developer only needs to upload the application code. After that, the platform builds, runs, and deploys the application. If the application receives more users, the platform can increase resources automatically without requiring much manual work.
+
+<p align="center">
+  <img src="k.jpeg" alt="Platform as a Service" width="500">
+</p>
+
+<br>
 
 ## Advantages of PaaS
 
@@ -47,3 +55,4 @@ In my opinion, Platform as a Service is a good choice for students, beginners, a
 * https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-paas
 * https://en.wikipedia.org/wiki/Platform_as_a_service
 * OpenAI. ChatGPT. Used for improving grammar, formatting, and explaining the Platform as a Service (PaaS) concept. https://chatgpt.com/
+
