@@ -1,6 +1,6 @@
 # Platform as a Service (PaaS)
 
-![Alternative Text](paas.webp)
+    ![Alternative Text](paas.webp)
 
 ## Introduction
 
