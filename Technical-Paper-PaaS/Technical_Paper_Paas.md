@@ -1,6 +1,8 @@
 # Platform as a Service (PaaS)
 
-    ![Alternative Text](paas.webp)
+<p align="center">
+  <img src="assets/paas.webp" alt="Platform as a Service" width="500">
+</p>
 
 ## Introduction
 
@@ -11,7 +13,7 @@ Platform as a Service, also called PaaS, is one of the cloud computing services 
 When using PaaS, the cloud provider prepares the development environment. The provider takes care of the servers, operating system, storage, networking, security updates, and software installation. The developer only needs to upload the application code. After that, the platform builds, runs, and deploys the application. If the application receives more users, the platform can increase resources automatically without requiring much manual work.
 
 <p align="center">
-  <img src="k.jpeg" alt="Platform as a Service" width="500">
+  <img src="assets/paas2.jpeg" alt="Platform as a Service" width="500">
 </p>
 
 <br>
@@ -51,8 +53,7 @@ Suppose I create a movie ticket booking website using Django. Instead of buying 
 In my opinion, Platform as a Service is a good choice for students, beginners, and companies that want to develop applications quickly. It reduces the time spent on system management and allows developers to concentrate on creating useful software. Although it has some limitations, PaaS is a practical solution for many web application projects and is becoming more popular in cloud computing.
 
 ## References
-* https://www.youtube.com/watch?v=9CVBohl6w0Q&t=299s
-* https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-paas
-* https://en.wikipedia.org/wiki/Platform_as_a_service
-* OpenAI. ChatGPT. Used for improving grammar, formatting, and explaining the Platform as a Service (PaaS) concept. https://chatgpt.com/
+* YouTube Video : https://www.youtube.com/watch?v=9CVBohl6w0Q&t=299s
+* Microsoft Azure : https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-paas
+* Wikipedia : https://en.wikipedia.org/wiki/Platform_as_a_service
 
