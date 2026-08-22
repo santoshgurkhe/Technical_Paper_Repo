@@ -9,12 +9,12 @@ In Python, we normally use a list when we need something like an array. A list c
 ```python
 marks = [45, 72, 61, 88]
 
-marks.append(95)       # Add a value at the end
-marks.insert(1, 50)    # Add a value at a position
-marks.remove(61)       # Remove a value
-marks.pop()            # Remove the last value
-marks.sort()           # Sort the list
-marks.reverse()        # Reverse the list
+marks.append(95)       
+marks.insert(1, 50)    
+marks.remove(61)      
+marks.pop()          
+marks.sort()       
+marks.reverse()     
 ```
 
 For example, if I have a list of marks, I can use sort() to arrange them from smaller to larger values.
@@ -33,7 +33,7 @@ Output:
 [45, 61, 72, 88]
 ```
 
-Other useful methods include `count()`, `index()`, and `clear()`.
+Other useful methods include count(), index(), and clear()
 
 ## 2. String Methods
 
@@ -77,7 +77,7 @@ Output:
 This is a Python message
 ```
 
-## 3. Dictionary Methods
+### Dictionary Methods
 
 A dictionary stores data in key: value pairs. It is useful when we want to connect one value with another.
 ```python
@@ -100,7 +100,7 @@ print(student)
 
 keys() returns all keys, values() returns all values, and items() returns both keys and values. get() safely gets a value using its key. update() adds or changes data, and pop() removes an item.
 
-## Tuple and Set
+### Tuple and Set
 
 A tuple is similar to a list, but its values cannot be changed after creation.
 ```python
@@ -119,7 +119,7 @@ Output:
 
 {1, 2, 3, 4}
 ```
-## List Comprehension
+### List Comprehension
 
 List comprehension is a short way to create a list using a loop.
 ```python
@@ -143,7 +143,7 @@ even_numbers = [num for num in numbers if num % 2 == 0]
 
 print(even_numbers)
 
-## Exception Handling
+### Exception Handling
 
 Exception handling helps us handle errors without stopping the complete program.
 ```python
@@ -159,7 +159,7 @@ finally:
 ```
 try contains the code that may cause an error. except handles the error. finally always runs whether an error happens or not.
 
-## File Handling
+### File Handling
 
 File handling is used to read or write data in files.
 
@@ -178,7 +178,7 @@ with open("notes.txt", "a") as file:
 ```
 r is used for reading, w for writing, and a for adding content without removing existing data.
 
-##  Lambda Functions
+###  Lambda Functions
 
 A lambda function is a small function written in one line. It is useful for simple operations.
 ```python
