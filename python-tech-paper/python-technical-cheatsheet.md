@@ -77,6 +77,129 @@ Output:
 This is a Python message
 ```
 
+## 3. Dictionary Methods
+
+A dictionary stores data in key: value pairs. It is useful when we want to connect one value with another.
+```python
+student = {
+    "name": "Santosh",
+    "age": 22,
+    "marks": 85
+}
+
+print(student.keys())
+print(student.values())
+print(student.items())
+print(student.get("name"))
+
+student.update({"city": "Bangalore"})
+student.pop("age")
+
+print(student)
+```
+
+keys() returns all keys, values() returns all values, and items() returns both keys and values. get() safely gets a value using its key. update() adds or changes data, and pop() removes an item.
+
+## Tuple and Set
+
+A tuple is similar to a list, but its values cannot be changed after creation.
+```python
+colors = ("red", "blue", "green")
+
+print(colors[0])
+print(len(colors))
+```
+A set stores only unique values. Duplicate values are automatically removed.
+
+numbers = {1, 2, 2, 3, 4, 4}
+
+print(numbers)
+```
+Output:
+
+{1, 2, 3, 4}
+```
+## List Comprehension
+
+List comprehension is a short way to create a list using a loop.
+```python
+numbers = [1, 2, 3, 4, 5]
+
+squares = [num ** 2 for num in numbers]
+
+print(squares)
+```
+```
+Output:
+
+[1, 4, 9, 16, 25]
+```
+
+We can also add a condition.
+
+numbers = [1, 2, 3, 4, 5, 6]
+
+even_numbers = [num for num in numbers if num % 2 == 0]
+
+print(even_numbers)
+
+## Exception Handling
+
+Exception handling helps us handle errors without stopping the complete program.
+```python
+try:
+    number = int(input("Enter a number: "))
+    print(number)
+
+except ValueError:
+    print("Please enter a valid number")
+
+finally:
+    print("Program finished")
+```
+try contains the code that may cause an error. except handles the error. finally always runs whether an error happens or not.
+
+## File Handling
+
+File handling is used to read or write data in files.
+
+Writing to a File - 
+```python
+with open("notes.txt", "w") as file:
+    file.write("I am learning Python")
+Reading a File
+with open("notes.txt", "r") as file:
+    data = file.read()
+
+print(data)
+Appending to a File
+with open("notes.txt", "a") as file:
+    file.write("\nPython is easy")
+```
+r is used for reading, w for writing, and a for adding content without removing existing data.
+
+##  Lambda Functions
+
+A lambda function is a small function written in one line. It is useful for simple operations.
+```python
+add = lambda a, b: a + b
+
+print(add(10, 20))
+```
+```
+Output:
+
+30
+```
+Lambda functions are often used with functions like sorted(), map(), and filter().
+```python
+numbers = [5, 2, 8, 1]
+
+result = sorted(numbers, key=lambda x: x)
+
+print(result)
+```
+
 ## 3. Objects and Object-Oriented Programming
 
 Object-Oriented Programming, or OOP, is a way of writing programs using classes and objects. A class is like a plan, and an object is the actual thing created from that class.
@@ -218,7 +341,6 @@ def check_function(func):
         func()
 
     return wrapper
-
 
 @check_function
 def study():
