@@ -473,104 +473,6 @@ The bg primary class is used to add a background color to an element.
 }
 ~~~
 
-## Rounded Corners
-
-The rounded class is used to make the corners of an element rounded.
-
-### HTML
-
-~~~html
-<div class="rounded">
-  Rounded Box
-</div>
-~~~
-
-### CSS
-
-~~~css
-.rounded {
-  border-radius: 10px;
-}
-~~~
-
-## Shadow
-
-The shadow class is used to add a shadow around an element.
-
-### HTML
-
-~~~html
-<div class="shadow">
-  Box with Shadow
-</div>
-~~~
-
-### CSS
-
-~~~css
-.shadow {
-  box-shadow: 0 2px 5px gray;
-}
-~~~
-
-## Hidden Element
-
-The hidden class is used to hide an element from the webpage.
-
-### HTML
-
-~~~html
-<p class="hidden">This text is hidden</p>
-~~~
-
-### CSS
-
-~~~css
-.hidden {
-  display: none;
-}
-~~~
-
-## Margin
-
-The margin class is used to add space outside an element.
-
-### HTML
-
-~~~html
-<div class="margin">
-  Box
-</div>
-~~~
-
-### CSS
-
-~~~css
-.margin {
-  margin: 20px;
-}
-~~~
-
-## Padding
-
-The padding class is used to add space inside an element.
-
-### HTML
-
-~~~html
-<div class="padding">
-  Box
-</div>
-~~~
-
-### CSS
-
-~~~css
-.padding {
-  padding: 20px;
-}
-~~~
-
 ## Multiple Styling Classes
 
 We can use more than one class on the same HTML element.
@@ -711,16 +613,14 @@ Inline styles have very high priority compared to normal CSS selectors.
 
 # CSS Responsive Queries
 
-CSS Responsive Queries, also called **Media Queries**, are used to change the design of a website based on the screen size.
+CSS Responsive Queries, also called **Media Queries**, are used to change a website's design based on the screen size.
 
-In simple words, media queries help us make a website look good on different devices such as:
+They help websites work well on:
 
-* Mobile phones
-* Tablets
-* Laptops
-* Desktop computers
-
-For example, a website may look good on a large computer screen, but the same design may not look good on a small mobile screen. Media queries allow us to change the CSS for smaller or larger screens.
+* Mobile
+* Tablet
+* Laptop
+* Desktop
 
 ## Basic Syntax
 
@@ -730,7 +630,7 @@ For example, a website may look good on a large computer screen, but the same de
 }
 ```
 
-The CSS inside the media query will only work when the given condition is true.
+The CSS inside the media query works only when the condition is true.
 
 ## Example
 
@@ -746,40 +646,21 @@ p {
 }
 ```
 
-Here, the normal font size is `24px`.
+Here, the font size is `24px` normally. On screens **600px or smaller**, it becomes `16px`.
 
-But when the screen width is `600px` or smaller, the font size becomes `16px`.
+## `max-width` and `min-width`
 
-So:
-
-```text
-Large screen → 24px
-Small screen → 16px
-```
-
-## Using `max-width`
-
-`max-width` means the CSS will apply when the screen width is **equal to or smaller than** the given size.
-
-Example:
+`max-width` applies CSS when the screen is **equal to or smaller than** the given size.
 
 ```css
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .container {
         width: 100%;
     }
 }
 ```
 
-This CSS will work when the screen width is `768px` or less.
-
-It is commonly used for tablets and mobile devices.
-
-## Using `min-width`
-
-`min-width` means the CSS will apply when the screen width is **equal to or larger than** the given size.
-
-Example:
+`min-width` applies CSS when the screen is **equal to or larger than** the given size.
 
 ```css
 @media (min-width: 768px) {
@@ -789,120 +670,30 @@ Example:
 }
 ```
 
-This CSS will work when the screen width is `768px` or more.
+## Breakpoints
 
-## Example with Navigation
-
-On a large screen, we may want navigation items to appear in one row.
-
-```css
-nav {
-    display: flex;
-    gap: 20px;
-}
-```
-
-But on a mobile screen, we may want them to appear one below another.
-
-```css
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-    }
-}
-```
-
-So the layout changes based on the screen size.
-
-```text
-Desktop:
-
-Home   About   Contact
-
-
-Mobile:
-
-Home
-About
-Contact
-```
-
-## Common Breakpoints
-
-Developers often use different screen sizes to change the layout.
+Breakpoints are screen sizes where we change the layout.
 
 ```css
 /* Mobile */
-@media (max-width: 600px) {
-}
+@media (max-width: 600px) { }
 
 /* Tablet */
-@media (min-width: 601px) and (max-width: 1024px) {
-}
+@media (min-width: 601px) and (max-width: 1024px) { }
 
 /* Desktop */
-@media (min-width: 1025px) {
-}
+@media (min-width: 1025px) { }
 ```
 
-These sizes are called **breakpoints**.
+## Mobile-First Approach
 
-A breakpoint is a screen size where we change the design or layout of the website.
-
-
-## Example with Grid
-
-Suppose we have three columns on a large screen.
-
-```css
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-```
-
-On a mobile screen, three columns may be too small. We can change it to one column.
-
-```css
-@media (max-width: 600px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
-}
-```
-
-So:
-
-```text
-Desktop:
-
-[ Box ] [ Box ] [ Box ]
-
-
-Mobile:
-
-[ Box ]
-
-[ Box ]
-
-[ Box ]
-```
-
-## Mobile First Approach
-
-A common way to write responsive CSS is called the **mobile-first approach**.
-
-First, we write CSS for mobile devices.
+In the mobile-first approach, we write CSS for mobile first and use `min-width` for larger screens.
 
 ```css
 .container {
     display: block;
 }
-```
 
-Then we use `min-width` to change the design for larger screens.
-
-```css
 @media (min-width: 768px) {
     .container {
         display: flex;
@@ -910,11 +701,11 @@ Then we use `min-width` to change the design for larger screens.
 }
 ```
 
-This means:
+**In simple words:**
 
 ```text
-Mobile → block layout
-Large screen → flex layout
+Mobile → Block layout
+Desktop → Flex layout
 ```
 
 # Flexbox
@@ -1115,5 +906,4 @@ The paragraph will be green because the second rule is written later.
 
 - CSS Concepts - https://www.learn-html-css.com/learn-html-css/learn-to-code-css/css-box-model/
 - CSS Specificity Youtube Video - https://youtu.be/uTcpbPMZlFE?si=ugp8Pirm8A_JWKyV
-
 - I took help from ChatGPT to create the box diagrams used in this file.
