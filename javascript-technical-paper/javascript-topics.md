@@ -196,6 +196,46 @@ try {
 
 It also helps us display useful error information while debugging.
 
+<br>
+
+# Spread Operator
+
+The spread operator `...` expands elements from an array or properties from an object.
+
+## Array
+
+```javascript
+let first = [1, 2];
+let second = [3, 4];
+
+let numbers = [...first, ...second];
+
+console.log(numbers); // [1, 2, 3, 4]
+```
+
+## Object
+
+```javascript
+let person = { name: "Santosh" };
+
+let user = { ...person, age: 22 };
+
+console.log(user);
+// { name: "Santosh", age: 22 }
+```
+
+# Template Literals
+
+Template literals use backticks `` ` `` and allow variables inside `${}`.
+
+```javascript
+let name = "Santosh";
+let age = 22;
+
+let message = `My name is ${name} and I am ${age} years old.`;
+
+console.log(message);
+```
 
 # Default Parameters
 
